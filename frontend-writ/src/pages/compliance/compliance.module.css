@@ -1,0 +1,46 @@
+.complianceContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.assignDoables {
+    width: 200px;
+    background-color: #39cccc;
+    border: none;
+}
+
+.tableHeadings {
+    display: flex;
+    justify-content: space-around;
+}
+
+.s1 {
+    background-color: white;
+    color: black;
+}
+
+.s2 {
+    background-color: #076391;
+    color: white;
+}
+
+.s3 {
+    background-color: floralwhite;
+    color: black;
+}
+
+.s4 {
+    background-color: moccasin;
+    color: black;
+}
+
+.s5 {
+    background-color: lightcoral;
+    color: black;
+}
+
+.s6 {
+    background-color: #d9d9d9;
+    color: #747474;
+}

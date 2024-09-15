@@ -1,0 +1,45 @@
+.activitiesDiv {
+    padding: 20px;
+}
+
+.option1, .option2, .option3, .option4 {
+    padding: 30px;
+}
+
+.boxOption1, .boxOption2, .boxOption3, .boxOption4 {
+    width: 100%;
+    box-shadow: 0px 0px 20px #afafaf;
+    padding: 13px;
+    border-radius: 7px;
+}
+
+.imageOption1, .imageOption2, .imageOption3, .imageOption4 {
+    width: 100%;
+    border: 1px solid rgb(0,0,0,0.2);
+}
+
+.textOption1, .textOption2, .textOption3, .textOption4 {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 25px; 
+}
+
+.linkLaw, .linkSchedule, .linkCompliance, .linkSearch {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1100px) {
+    
+}
+
+@media screen and (max-width: 768px) {
+    .textOption1, .textOption2, .textOption3, .textOption4 {
+        font-size: 15px;
+    }
+}
