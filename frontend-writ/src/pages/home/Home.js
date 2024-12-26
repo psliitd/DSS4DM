@@ -97,11 +97,11 @@ const Home = () => {
             <Link to="/user/law" className={styles.linkLaw}>
               <div className={styles.boxOption1}>
                 <img className={styles.imageOption1} src="/law.jpg" alt="Meeting"/>
-                <p className={styles.textOption1}>Law And Order</p>
+                <p className={styles.textOption1}>Writ</p>
               </div>
             </Link>
           </div>
-          <div className={`${styles.option2} col-sm-4`}>
+          {/* <div className={`${styles.option2} col-sm-4`}>
             <Link to="/user/schedule" className={styles.linkSchedule}>
               <div className={styles.boxOption2}>
                 <img className={styles.imageOption2} src="/schedule.jpg" alt="Meeting"/>
@@ -124,7 +124,7 @@ const Home = () => {
                 <p className={styles.textOption4}>Samadhan</p>
               </div>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
       <div
@@ -139,7 +139,7 @@ const Home = () => {
             </div>
           </div> */}
           <div className="col-sm-12">
-            <h3>Upcoming</h3>
+            {/* <h3>Upcoming</h3> */}
             <div className="row">
               <div
                 style={{
@@ -226,6 +226,19 @@ const Home = () => {
                     </div>
                   );
                 })} */}
+
+          <div className="col-sm-12">
+            <img
+              src="https://th.bing.com/th/id/OIP.a7CJI22ccj1rg3J2YtlqlwAAAA?rs=1&pid=ImgDetMain"
+              alt="Telangana State Map"
+              style={{
+                width: "100%",
+                height: "auto",
+                borderRadius: "10px",
+                marginBottom: "20px",
+              }}
+            />
+          </div>
               </div>
             </div>
           </div>

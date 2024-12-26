@@ -22,10 +22,10 @@ export const Navbar = () => {
   const links = [
     { name: "Home", route: "home", icon: <AiFillHome size={40} /> },
     { name: 'Writ', route : "wp", icon: <FaClipboard size={40}/>}, 
-    { name: 'Schedule', route : "schedule", icon: <FaCalendarAlt size={40}/>}, 
-    { name: "Samadhaan", route: "search", icon: <FaSearch size={40} /> },
-    { name: "Law", route: "law", icon: <FaBalanceScale size={40} /> },
-    { name: "Compliance", route: "compliance", icon: <GrTask size={40} /> },
+    // { name: 'Schedule', route : "schedule", icon: <FaCalendarAlt size={40}/>}, 
+    // { name: "Samadhaan", route: "search", icon: <FaSearch size={40} /> },
+    // { name: "Law", route: "law", icon: <FaBalanceScale size={40} /> },
+    // { name: "Compliance", route: "compliance", icon: <GrTask size={40} /> },
   ];
 
   const {

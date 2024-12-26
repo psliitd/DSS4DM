@@ -99,7 +99,7 @@ export const Login = () => {
             Login
           </button>
         </form>
-        <p className={styles.signUpText}>
+        {/* <p className={styles.signUpText}>
           Don't Have and Account Already?
         </p>
         <p>
@@ -108,7 +108,7 @@ export const Login = () => {
               Signup
             </button>
           </Link>
-        </p>
+        </p> */}
       </div>
     </div>
   );
