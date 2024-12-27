@@ -94,7 +94,7 @@ const Home = () => {
         <h3>Activites</h3>
         <div className="row">
           <div className={`${styles.option1} col-sm-4`}>
-            <Link to="/user/law" className={styles.linkLaw}>
+            <Link to="/user/wp" className={styles.linkLaw}>
               <div className={styles.boxOption1}>
                 <img className={styles.imageOption1} src="/law.jpg" alt="Meeting"/>
                 <p className={styles.textOption1}>Writ</p>
