@@ -30,7 +30,7 @@ export const Header = () => {
         <IconButton size="large" edge="start" color="inherit" onClick={changeToggleMenu}>
           {toggleMenu ? <CloseIcon/> : <MenuIcon/> }
         </IconButton>
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+        <Typography variant="h6" component="div" sx={{ flexGrow: 1, display:"flex" }}>
           <img src="/Logo.svg" alt="Logo Img Not Found" className={styles.logoImg}/>
           <img src="/Logo-1.png" alt="Logo 1 Img not found" className={styles.logo1Img}/>
         </Typography>

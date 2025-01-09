@@ -3,10 +3,9 @@ import { useWrit } from "./context/WritContext";
 import { Grid, FormControlLabel, Checkbox, Button, Box, TextField, } from "@mui/material";
 import { getBaseUrl } from "../../utils";
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function SixthStep({onPrev}) {
-    const navigate = useNavigate();
     const { writNumber,
             writClose, setWritClose,
             writCloseDate, setWritCloseDate,
@@ -17,8 +16,10 @@ export default function SixthStep({onPrev}) {
         setLoading(false);
     }, []);
     
+    const navigate = useNavigate();
     const handleSubmit = async() => {
         setLoading(true);
+        navigate("/user/wp");
         try {
             if (writCloseDate == '' || writClose == false){
                 alert("Please fill all required fields")
@@ -38,9 +39,9 @@ export default function SixthStep({onPrev}) {
               });
               const responseData = await response.json();
               if (responseData.success) {
+                navigate("/user/wp");
                 alert('Writ Data has been uploaded successfully');
                 console.log('Sixth step successful');
-                navigate("/user/wp");
               } else {
                 alert('Some error has occured');
                 console.error('Failed: problem in backend', responseData.error);

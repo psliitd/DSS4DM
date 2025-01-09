@@ -30,7 +30,7 @@ export const Login = () => {
       if (data.success) {
         localStorage.setItem("token", data.token);
         localStorage.setItem("username", username);
-        navigate("/user/wp");
+        navigate("/user/home");
       } else {
         alert(data.error);
         setLoginError(data.error);
@@ -99,7 +99,7 @@ export const Login = () => {
             Login
           </button>
         </form>
-        {/* <p className={styles.signUpText}>
+        <p className={styles.signUpText}>
           Don't Have and Account Already?
         </p>
         <p>
@@ -108,7 +108,7 @@ export const Login = () => {
               Signup
             </button>
           </Link>
-        </p> */}
+        </p>
       </div>
     </div>
   );

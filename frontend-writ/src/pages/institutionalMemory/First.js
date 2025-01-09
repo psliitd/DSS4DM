@@ -10,8 +10,10 @@ import { useWrit } from "./context/WritContext";
 import CircularProgress from '@mui/material/CircularProgress';
 import styles from "./WP.module.css";
 import Backdrop from "@mui/material/Backdrop"; // Import Backdrop
+import { useNavigate } from "react-router-dom";
 
 export default function FirstStep({ onNext }) {
+    const navigate = useNavigate();
     const {
         writNumber, 
         setWritNumber,
@@ -46,7 +48,6 @@ export default function FirstStep({ onNext }) {
     // const [loading, setLoading] = useState(false);
 
 
-
     const handleSubmit = async () => {
         setLoading(true);
         try {
@@ -76,10 +77,15 @@ export default function FirstStep({ onNext }) {
             body: formData,
           });
           const responseData = await response.json();
+        //   window.location.href = '/user/wp';
+        
+        navigate('/user/wp');
           if (responseData.success) {
             alert('Writ Data has been uploaded successfully');
             console.log('Writ added successfully');
+
           } 
+        
           else {
             alert('Some error has occured: '+ responseData.error);
             console.error('Failed to add writ: ', responseData.error);
@@ -299,25 +305,36 @@ export default function FirstStep({ onNext }) {
                 </Grid>
             </Grid>
 
-            <Box
-                sx={{ display: "flex", justifyContent: "space-between", mt: 3 }}
-            >
-                <Button></Button>
-                <Button
-                    variant="contained"
-                    sx={{ mr: 1 }}
-                    onClick={handleSubmit}
-                >
-                    Update
-                </Button>
-                <Button
-                    color="primary"
-                    onClick={() => {
-                        onNext();
-                    }}
-                >
-                    <NavigateNextIcon fontSize="large" />
-                </Button>
+            <Box sx={{ display: "flex", justifyContent: "flex-end", mt: 3, gap: 2 }}>
+                {!isAddNew ? (
+                    <>
+                        <Button
+                            variant="contained"
+                            onClick={handleSubmit}
+                        >
+                            Update & Close
+                        </Button>
+                        <Button
+                            variant="contained"
+                            onClick={() => {
+                                // handleSubmit();
+                                onNext();
+                            }}
+                        >
+                            Next
+                        </Button>
+                    </>
+                ) : (
+                    <Button
+                        variant="contained"
+                        onClick={() => {
+                            handleSubmit();
+                            onNext();
+                        }}
+                    >
+                        Save & Next
+                    </Button>
+                )}
             </Box>
         </>
     );

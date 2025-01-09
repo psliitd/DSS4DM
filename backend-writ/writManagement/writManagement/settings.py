@@ -103,10 +103,10 @@ WSGI_APPLICATION = 'writManagement.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dssDB',
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'db_dss_telangana',
 	'USER':'postgres',
-	'PASSWORD':'7078',
+	'PASSWORD':'dssDB',
 	"HOST":'127.0.0.1',
 	"PORT":'5432',
     }
